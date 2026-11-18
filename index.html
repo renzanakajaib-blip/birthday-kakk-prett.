@@ -1,108 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Birthday Gift — Kak Prett</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5b1024">
+<title>For Kak Prett ♡</title>
 <style>
-:root{--wine:#4b1021;--burgundy:#70283b;--rose:#a85b6d;--cream:#f7eee7;--paper:#fffaf6;--ink:#3d2028}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
-.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:32px 20px;color:var(--cream);background:radial-gradient(circle at 50% 35%,#81384b 0,#541729 48%,#310b17 100%);position:relative;overflow:hidden}
-.hero:before,.hero:after{content:"✦";position:absolute;color:#e7c8bd;opacity:.35;font-size:30px}.hero:before{top:13%;left:12%}.hero:after{right:13%;bottom:16%}
-.hero-inner{max-width:650px;position:relative;z-index:1}
-.eyebrow{font:11px Arial,sans-serif;letter-spacing:.35em;text-transform:uppercase;color:#e9c9c0}
-h1{font-size:clamp(42px,9vw,76px);font-weight:400;line-height:1.04;margin:22px 0 14px}
-.hero p{font-style:italic;color:#f0dcd4;font-size:18px}
-.heart{font-size:38px;color:#e8b8bd;margin:20px 0}
-.btn{display:inline-block;margin-top:20px;padding:13px 25px;border:1px solid #e9c9c0;border-radius:30px;color:var(--cream);text-decoration:none;font:12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-section{padding:76px 20px}.wrap{max-width:900px;margin:auto}
-.section-kicker{text-align:center;color:var(--rose);font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase}
-h2{text-align:center;color:var(--wine);font-weight:400;font-size:clamp(30px,6vw,44px);margin:12px 0 34px}
-.intro{text-align:center;max-width:620px;margin:0 auto 38px;line-height:1.8;color:#76535b}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.slot{min-height:210px;background:#eadbd4;border:1px dashed #b9878d;border-radius:16px;display:grid;place-items:center;text-align:center;padding:18px;color:#80515b}
-.slot strong{display:block;font-size:18px;font-weight:400;margin-bottom:8px}
-.slot small{font:11px Arial,sans-serif;letter-spacing:.08em;line-height:1.6}
-.paper{max-width:700px;margin:auto;background:var(--paper);padding:clamp(25px,6vw,55px);border-radius:4px;box-shadow:0 12px 35px #4b102112;border:1px solid #ead9d1}
-.paper .placeholder{min-height:230px;white-space:pre-wrap;line-height:1.9;color:#9a747b;font-style:italic}
-.paper .line{border-bottom:1px solid #e8d9d2;margin:20px 0}
-.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.reason{padding:22px;background:#fffaf6;border-left:3px solid var(--rose);line-height:1.7;min-height:90px;color:#865e66}
-.final{background:var(--wine);color:var(--cream);text-align:center;padding:85px 20px}
-.final h2{color:var(--cream);margin-bottom:16px}.final p{color:#eed8d2;line-height:1.8}
-footer{text-align:center;padding:22px;color:#987780;font:10px Arial,sans-serif;letter-spacing:.12em}
-@media(max-width:600px){.grid,.list{grid-template-columns:1fr}.slot{min-height:180px}section{padding:58px 18px}}
+:root{--wine:#5b1024;--wine2:#7d2940;--cream:#fff8f0;--rose:#ead2d3;--ink:#40212a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif;min-height:100vh}
+header{position:sticky;top:0;z-index:5;background:rgba(255,248,240,.94);backdrop-filter:blur(10px);border-bottom:1px solid #ead9d6;padding:12px 14px}
+.brand{text-align:center;color:var(--wine);font-size:14px;letter-spacing:2px}
+nav{display:flex;gap:7px;overflow-x:auto;padding:10px 0 2px;justify-content:flex-start;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button,.action{border:1px solid #b9828e;background:transparent;color:var(--wine);border-radius:30px;padding:9px 13px;font-size:13px;white-space:nowrap;cursor:pointer}
+nav button.active,.action.primary{background:var(--wine);color:white;border-color:var(--wine)}
+main{max-width:760px;margin:auto;padding:25px 18px 40px}
+.page{display:none;min-height:68vh;animation:fade .35s ease}
+.page.active{display:flex;flex-direction:column;justify-content:center}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--wine2);font:11px Arial,sans-serif;text-align:center}
+h1,h2{text-align:center;color:var(--wine);font-weight:normal}
+h1{font-size:clamp(36px,9vw,62px);margin:15px 0}
+h2{font-size:clamp(28px,7vw,42px);margin:10px 0 18px}
+p{line-height:1.8;font-size:16px}
+.center{text-align:center}
+.hero-heart{font-size:54px;color:var(--wine);text-align:center;margin:8px}
+.panel{background:white;border:1px solid #ecd9d8;border-radius:22px;padding:22px;margin:12px 0;box-shadow:0 10px 30px #5b102410}
+.hint{color:#92747b;font:12px Arial,sans-serif;text-align:center}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.photo{min-height:155px;border:1.5px dashed #c99da5;border-radius:18px;background:#f8e9e7;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;color:#80515d;font:13px Arial,sans-serif}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+.reason{border:1px solid #e7cdd0;border-radius:16px;margin:10px 0;background:#fff;padding:0;overflow:hidden}
+.reason summary{padding:16px;color:var(--wine);cursor:pointer;font-size:16px}
+.reason p{padding:0 16px 14px;margin:0}
+.letter-space{min-height:210px;white-space:pre-wrap}
+footer{text-align:center;color:#a17e85;font:11px Arial,sans-serif;padding:12px}
+@media(min-width:650px){nav{justify-content:center}.photo{min-height:210px}}
 </style>
 </head>
 <body>
-<header class="hero">
- <div class="hero-inner">
-  <div class="eyebrow">A little birthday page</div>
-  <div class="heart">♡</div>
-  <h1>For Kak Prett</h1>
-  <p>[Tulis kalimat pembuka versimu di sini]</p>
-  <a class="btn" href="#memories">Open your gift</a>
- </div>
+<header>
+ <div class="brand">A LITTLE WORLD FOR KAK PRETT ♡</div>
+ <nav aria-label="Navigasi halaman">
+  <button class="active" data-page="home">Home</button>
+  <button data-page="memories">Memories</button>
+  <button data-page="letter">A Letter</button>
+  <button data-page="reasons">For You</button>
+  <button data-page="future">Our Future</button>
+  <button data-page="ending">Surprise</button>
+ </nav>
 </header>
-
-<section id="memories">
- <div class="wrap">
-  <div class="section-kicker">01 · Our little moments</div>
-  <h2>Our Memories</h2>
-  <p class="intro">[Tambahkan pengantar singkat tentang kenangan kalian di sini.]</p>
-  <div class="grid">
-   <div class="slot"><div><strong>＋ Foto / screenshot 1</strong><small>Ganti kotak ini dengan gambar kenangan kalian</small></div></div>
-   <div class="slot"><div><strong>＋ Foto / screenshot 2</strong><small>Ganti kotak ini dengan gambar kenangan kalian</small></div></div>
-   <div class="slot"><div><strong>＋ Foto / screenshot 3</strong><small>Ganti kotak ini dengan gambar kenangan kalian</small></div></div>
-   <div class="slot"><div><strong>＋ Foto / screenshot 4</strong><small>Ganti kotak ini dengan gambar kenangan kalian</small></div></div>
-  </div>
+<main>
+<section class="page active" id="home">
+ <div class="eyebrow">A special day for someone special</div>
+ <div class="hero-heart">♥</div>
+ <h1>For Kak Prett</h1>
+ <p class="center">Happy birthday, Tasya ♡</p>
+ <div class="panel center">
+  <p>Hari ini ada sesuatu yang aku siapkan khusus buat kamu.</p>
+  <p class="hint">Tekan tombol di bawah untuk mulai membuka hadiah kecil ini.</p>
+  <div class="actions"><button class="action primary" onclick="go('memories')">Buka hadiah ♡</button></div>
  </div>
 </section>
 
-<section style="background:#efe1da" id="letter">
- <div class="wrap">
-  <div class="section-kicker">02 · From me to you</div>
-  <h2>A Letter For You</h2>
-  <div class="paper">
-   <div class="placeholder">[Tulis surat ulang tahunmu sendiri di bagian ini.
-
-Kamu bisa menghapus teks petunjuk ini dan menggantinya dengan suratmu.]</div>
-   <div class="line"></div>
-   <div style="text-align:right;color:#9a747b;font-style:italic">[Tanda tangan / panggilanmu]</div>
-  </div>
+<section class="page" id="memories">
+ <div class="eyebrow">Little moments, big meaning</div><h2>Our Memories</h2>
+ <p class="center">Tempat untuk menyimpan momen-momen yang berarti buat kita.</p>
+ <div class="photo-grid">
+  <div class="photo">📷<br>Tambahkan foto atau kenangan 1</div>
+  <div class="photo">📷<br>Tambahkan foto atau kenangan 2</div>
+  <div class="photo">📷<br>Tambahkan foto atau kenangan 3</div>
+  <div class="photo">📷<br>Tambahkan foto atau kenangan 4</div>
  </div>
+ <p class="hint">Nanti bagian ini bisa diganti dengan foto pilihanmu.</p>
+ <div class="actions"><button class="action" onclick="go('home')">← Kembali</button><button class="action primary" onclick="go('letter')">Lanjut →</button></div>
 </section>
 
-<section id="reasons">
- <div class="wrap">
-  <div class="section-kicker">03 · Little things</div>
-  <h2>Reasons I Appreciate You</h2>
-  <p class="intro">[Isi sendiri setiap kotak dengan hal-hal yang ingin kamu sampaikan.]</p>
-  <div class="list">
-   <div class="reason">[Hal pertama yang kamu hargai]</div>
-   <div class="reason">[Hal kedua yang kamu hargai]</div>
-   <div class="reason">[Hal ketiga yang kamu hargai]</div>
-   <div class="reason">[Hal keempat yang kamu hargai]</div>
-  </div>
+<section class="page" id="letter">
+ <div class="eyebrow">From me to you</div><h2>A Letter for You</h2>
+ <div class="panel">
+  <p class="hint">GANTI TEKS DI BAWAH INI DENGAN SURAT BUATANMU SENDIRI</p>
+  <div class="letter-space">Tulis surat spesialmu untuk Tasya di sini...
+
+Bisa berisi ucapan, rasa terima kasih, kenangan, atau hal-hal yang selama ini ingin kamu sampaikan.</div>
  </div>
+ <div class="actions"><button class="action" onclick="go('memories')">← Kembali</button><button class="action primary" onclick="go('reasons')">Lanjut →</button></div>
 </section>
 
-<section style="background:#efe1da" id="someday">
- <div class="wrap">
-  <div class="section-kicker">04 · Until then</div>
-  <h2>One Day, We'll Meet</h2>
-  <p class="intro">[Tulis harapan atau hal sederhana yang ingin kalian lakukan saat akhirnya bertemu.]</p>
-  <div class="slot" style="max-width:650px;margin:auto;min-height:150px"><div><strong>＋ Tambahkan ilustrasi / foto pilihan</strong><small>Bagian ini opsional</small></div></div>
+<section class="page" id="reasons">
+ <div class="eyebrow">A few things I appreciate</div><h2>Things I Love About You</h2>
+ <p class="center">Tekan satu per satu untuk membuka kartu kecilnya.</p>
+ <details class="reason"><summary>One little thing ♡</summary><p>Tulis hal pertama yang kamu hargai dari Tasya di sini.</p></details>
+ <details class="reason"><summary>Another little thing ♡</summary><p>Tulis hal kedua yang kamu hargai dari Tasya di sini.</p></details>
+ <details class="reason"><summary>And one more ♡</summary><p>Tulis hal ketiga yang kamu hargai dari Tasya di sini.</p></details>
+ <div class="actions"><button class="action" onclick="go('letter')">← Kembali</button><button class="action primary" onclick="go('future')">Lanjut →</button></div>
+</section>
+
+<section class="page" id="future">
+ <div class="eyebrow">Until the day we meet</div><h2>Our Future</h2>
+ <div class="panel center">
+  <div class="hero-heart">♡</div>
+  <p>Masih ada banyak cerita yang menunggu untuk kita buat.</p>
+  <p class="hint">Tulis harapan atau rencana kecil untuk hari ketika kalian akhirnya bertemu.</p>
+  <p class="letter-space">Tulis harapanmu di sini...</p>
  </div>
+ <div class="actions"><button class="action" onclick="go('reasons')">← Kembali</button><button class="action primary" onclick="go('ending')">Lihat kejutan →</button></div>
 </section>
 
-<section class="final">
- <div class="eyebrow">End of this little page</div>
- <div class="heart">♡</div>
- <h2>[Tulis pesan penutupmu]</h2>
- <p>[Tambahkan kalimat terakhir pilihanmu di sini.]</p>
+<section class="page" id="ending">
+ <div class="eyebrow">Made with love</div><div class="hero-heart">♥</div>
+ <h2>One Last Thing...</h2>
+ <div class="panel center">
+  <p>Semoga halaman kecil ini bisa jadi salah satu bagian manis dari hari ulang tahunmu.</p>
+  <p><strong>Happy birthday, Kak Prett!</strong></p>
+  <p class="hint">— dari seseorang yang menyiapkan ini khusus untukmu ♡</p>
+ </div>
+ <div class="actions"><button class="action" onclick="go('home')">Kembali ke awal ↺</button></div>
 </section>
-<footer>MADE WITH CARE · FOR KAK PRETT</footer>
+</main>
+<footer>MADE WITH ♡ IN MAROON</footer>
+<script>
+function go(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+</script>
 </body>
 </html>
